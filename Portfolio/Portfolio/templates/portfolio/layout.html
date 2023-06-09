@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    {% block head %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block styles %} {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/hero_page.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    {% endblock styles %}
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <meta name="author" content="Gonçalo Nunes" />
+    <meta name="description" content="Website para o projeto de pw" />
+    <meta name="keywords" content="palavras chave" />
+    {% block title %}
+    <title>Welcome</title>
+    {% endblock title %} {% endblock head %}
+  </head>
+
+  <body>
+    {% block body %}
+    <input type="checkbox" id="active" />
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+    <div class="wrapper">
+      <ul>
+        <li><a href="{% url 'portfolio:index' %}">Home</a></li>
+        <li><a href="{% url 'portfolio:about' %}">About</a></li>
+        <li><a href="{% url 'portfolio:projects' %}">Projects</a></li>
+        <li><a href="{% url 'portfolio:contacts' %}">Contacts</a></li>
+        <li><a href="{% url 'portfolio:pw' %}">PW</a></li>
+        <li><a href="{% url 'portfolio:playground' %}">JSPlayground</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      {% block content %}
+      <div class="title">Welcome</div>
+      <article>
+        <p>
+          "You define your own life. Don't let other people write your script."
+        </p>
+      </article>
+      {% endblock content %}
+    </div>
+
+    <footer>
+      {% block footer %} Gonçalo Nunes - a22202617 - Universidade Lusófona -
+      2022/2023 {% endblock footer %}
+    </footer>
+    {% endblock body %}
+  </body>
+</html>

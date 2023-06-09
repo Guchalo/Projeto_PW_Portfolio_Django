@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/pw.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <meta name="author" content="Gonçalo Nunes" />
+    <meta name="description" content="Website para o projeto de pw" />
+    <meta name="keywords" content="palavras chave" />
+    <title>Programação Web</title>
+  </head>
+  <body>
+    <input type="checkbox" id="active" />
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+    <div class="wrapper">
+      <ul>
+        <li><a href="{% url 'portfolio:index' %}">Home</a></li>
+        <li><a href="{% url 'portfolio:about' %}">About</a></li>
+        <li><a href="{% url 'portfolio:projects' %}">Projects</a></li>
+        <li><a href="{% url 'portfolio:contacts' %}">Contacts</a></li>
+        <li><a href="{% url 'portfolio:pw' %}">PW</a></li>
+        <li><a href="{% url 'portfolio:playground' %}">JSPlayground</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="title">Programação Web</div>
+      <article>
+        <br />
+        <table class="table">
+          <tr>
+            <th>Tecnologias utilizadas</th>
+            <th>Descrição</th>
+            <th>✔❌</th>
+          </tr>
+          <tr>
+            <td>HTML</td>
+            <td>
+              HTML é uma linguagem de marcação utilizada na construção de
+              páginas na Web
+            </td>
+            <td>✔</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td>
+              Cascading Style Sheets é um mecanismo para adicionar estilos a uma
+              página web, aplicado diretamente nas tags HTML ou ficar contido
+              dentro de tags
+            </td>
+            <td>✔</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>
+              JavaScript é uma linguagem de programação interpretada
+              estruturada, de script em alto nível com tipagem dinâmica fraca e
+              multiparadigma
+            </td>
+            <td>✔</td>
+          </tr>
+          <tr>
+            <td>Python</td>
+            <td>
+              Python é uma linguagem de programação de alto nível, interpretada
+              de script, imperativa, orientada a objetos, funcional, de tipagem
+              dinâmica e forte
+            </td>
+            <td>❌</td>
+          </tr>
+          <tr>
+            <td>Django</td>
+            <td>
+              Django é um framework para desenvolvimento rápido para web,
+              escrito em Python, que utiliza o padrão model-template-view
+            </td>
+            <td>❌</td>
+          </tr>
+          <tr>
+            <td>Heroku</td>
+            <td>
+              Heroku é uma plataforma de nuvem como serviço que suporta várias
+              linguagens de programação
+            </td>
+            <td>❌</td>
+          </tr>
+        </table>
+        <div>
+          <br />
+          <h2>Labs</h2>
+          <a href="https://a22202617.pythonanywhere.com">Lab1/2</a> /
+          <a href="http://lab3pw.pythonanywhere.com/">Lab3</a> /
+          <a href="http://lab4pw22202617.pythonanywhere.com/">Lab4</a>
+        </div>
+      </article>
+    </div>
+
+    <footer>
+      Gonçalo Nunes - a22202617 - Universidade Lusófona - 2022/2023
+    </footer>
+  </body>
+</html>

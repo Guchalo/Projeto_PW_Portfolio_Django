@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/playgroung.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <meta name="author" content="Gonçalo Nunes" />
+    <meta name="description" content="Website para o projeto de pw" />
+    <meta name="keywords" content="palavras chave" />
+    <title>JavaScript Playground</title>
+  </head>
+  <script
+    src="https://kit.fontawesome.com/09f015a6ac.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/playground.js"></script>
+  <body>
+    <input type="checkbox" id="active" />
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+    <div class="wrapper">
+      <ul>
+        <li><a href="{% url 'portfolio:index' %}">Home</a></li>
+        <li><a href="{% url 'portfolio:about' %}">About</a></li>
+        <li><a href="{% url 'portfolio:projects' %}">Projects</a></li>
+        <li><a href="{% url 'portfolio:contacts' %}">Contacts</a></li>
+        <li><a href="{% url 'portfolio:pw' %}">PW</a></li>
+        <li><a href="{% url 'portfolio:playground' %}">JSPlayground</a></li>
+      </ul>
+    </div>
+    <div class="content" id="content">
+      <div class="title" id="title">JavaScript Playground</div>
+      <label for="nome" id="nome6" onmouseover="forLabel1(this)"></label>
+      <article>
+        <button>
+          <i
+            class="fa-solid fa-sun fa-xl"
+            aria-hidden="true"
+            id="btn"
+            style="color: #ffffff"
+            onclick="dark_light(this)"
+          >
+            Light
+          </i>
+        </button>
+        <br /><br />
+        Calculadora
+        <br /><br />
+        <input
+          type="text"
+          placeholder="Insira uma expressão"
+          name="expressao"
+          id="exp"
+        />
+        <button onclick="calculate(this)">Submit</button>
+        <button onclick="clearExp(this)">Clear</button>
+
+        <br /><br />
+        <label for="result" id="result">Resultado: 0</label><br />
+        <br /><br />
+        <input
+          type="text"
+          placeholder="Escreva o seu nome"
+          name="nome"
+          id="nome"
+        />
+        <label for="nome" id="nome5" onmouseover="forLabel1(this)"></label>
+        <button onclick="showName(this)">Submit</button>
+        <button onclick="clearOurico(this)">🦔</button>
+
+        <br /><br />
+        <div class="nomes" id="nomes">
+          <label for="nome" id="nome1" onmouseover="forLabel1(this)"></label>
+          <label for="nome" id="nome2" onmouseover="forLabel1(this)">🦔</label>
+          <label for="nome" id="nome3" onmouseover="forLabel1(this)"></label>
+        </div>
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <label for="nome" id="nome4" onmouseout="forLabel2(this)"> </label>
+        <br /><br />
+        <label class="labelData" id="labelData" for="dataAual" onclick="dataAtual(this)"
+          >Clique para ver a data de hoje</label
+        >
+      </article>
+    </div>
+
+    <footer>
+      Gonçalo Nunes - a22202617 - Universidade Lusófona - 2022/2023
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/about.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    {% load static %}
+    <link rel="icon" href="{% static 'portfolio/images/logo.png' %}" type="image/x-icon" />
+    <meta name="author" content="Gonçalo Nunes" />
+    <meta name="description" content="Website para o projeto de pw" />
+    <meta name="keywords" content="palavras chave" />
+    <title>About</title>
+  </head>
+  <body>
+    <input type="checkbox" id="active" />
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+    <div class="wrapper">
+      <ul>
+        <li><a href="{% url 'portfolio:index' %}">Home</a></li>
+        <li><a href="{% url 'portfolio:about' %}">About</a></li>
+        <li><a href="{% url 'portfolio:projects' %}">Projects</a></li>
+        <li><a href="{% url 'portfolio:contacts' %}">Contacts</a></li>
+        <li><a href="{% url 'portfolio:pw' %}">PW</a></li>
+        <li><a href="{% url 'portfolio:playground' %}">JSPlayground</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <img src="../images/foto.png" alt="" />
+      <article>
+        <p>
+          Olá, o meu nome é Gonçalo Nunes, tenho 21 anos e nasci em Loures, que
+          fica nos arredores de Lisboa.
+        </p>
+        <p>
+          Conclui o secundário na
+          <a href="https://www.esjaloures.org/"
+            >Escola Secundária José Afonso</a
+          >
+          e comecei a tirar uma licenciatura em Engenharia Informática de Redes
+          e Telecomunicações, mas quando cheguei ao 2ºano percebi que a vertente
+          de redes e telecomunicações não era o meu forte e, apesar de ter tido
+          bons resultados, decidi mudar e atualmente estou a tirar uma
+          licenciatura em Engenharia Informática, na
+          <a href="https://www.ulusofona.pt/">
+            Universidade Lusófona de Humanidades e Tecnologias</a
+          >.
+        </p>
+      </article>
+      <div class="allText">
+        <h3>Aptidões e competências pessoais</h3>
+        <p>
+          Em quase todos os projetos em que trabalhei, tive de trabalhar em
+          equipa e aprender a lidar com diversos tipos de pessoas. Sempre fui
+          capaz de lidar com divergências dentro do grupo para manter um equilibrio
+          e, quando é o caso, lidera-las. Considero-me uma pessoa bastante
+          flexivel e resiliente, sempre que tenho um projeto em mãos dou sempre
+          o meu melhor para o mesmo ficar ao meu gosto.
+        </p>
+        <br />
+        <h3>Interesses e hobbies</h3>
+        <p>
+          Gosto de jogar videojogos, assistir a desporto(principalmente futebol)
+          e de sair com amigos.
+        </p>
+        <br />
+        <h3>Experiencia profissional</h3>
+        <p>
+          Tirando os projetos da faculdade, de momento ainda não tenho
+          experiencia profissional.
+        </p>
+        <br /><br />
+        <div class="bts">
+          <button class="bt" onclick="">
+            <a style="color: white" href="files/CV - Gonçalo Nunes.pdf" download="CV-Gonçalo_Nunes">CV</a>
+          </button>
+          <button class="bt" onclick="">
+            <a style="color: white" href="files/CL - Gonçalo Nunes.pdf" download="CL-Gonçalo_Nunes">Carta de Apresentação</a>
+          </button>
+          <button class="bt" onclick="">
+            <a style="color: white" href="files/Resume - Gonçalo Nunes.pdf" download="Resume-Gonçalo_Nunes">Resume</a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Gonçalo Nunes - a22202617 - Universidade Lusófona - 2022/2023
+    </footer>
+  </body>
+</html>

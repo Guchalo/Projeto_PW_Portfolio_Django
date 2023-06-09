@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/projects.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <meta name="author" content="Gonçalo Nunes" />
+    <meta name="description" content="Website para o projeto de pw" />
+    <meta name="keywords" content="palavras chave" />
+    <title>Projects</title>
+  </head>
+  <body>
+    <input type="checkbox" id="active" />
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+    <div class="wrapper">
+      <ul>
+        <li><a href="{% url 'portfolio:index' %}">Home</a></li>
+        <li><a href="{% url 'portfolio:about' %}">About</a></li>
+        <li><a href="{% url 'portfolio:projects' %}">Projects</a></li>
+        <li><a href="{% url 'portfolio:contacts' %}">Contacts</a></li>
+        <li><a href="{% url 'portfolio:pw' %}">PW</a></li>
+        <li><a href="{% url 'portfolio:playground' %}">JSPlayground</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="title">Projects</div>
+      <article>
+        <div class="item" id="item1">
+          <h3 class="headerCard">FireTracker</h3>
+          <br />
+          <img src="images/ulht.png" alt="" />
+          <br />
+          <br />
+          <p>
+            Aplicação móvel desenvolvida em Kotlin e Java, para a cadeira de
+            Computação Móvel.
+          </p>
+          <p>A aplicação rastrea todos os fogos ativos no pais.</p>
+          <br />
+          <a href="https://github.com/ULHT-CM-2021-22/22005787-22005793"
+            >Link</a
+          >
+        </div>
+        <div class="item" id="item2">
+          <h3 class="headerCard">DEISIGreatGame</h3>
+          <br />
+          <img src="images/ulht.png" alt="" />
+          <br />
+          <br />
+          <p>
+            Programa desenvolvido em Java, para a cadeira de Linguagens de
+            Programação II.
+          </p>
+          <p>
+            O programa cria um jogo de tabuleiro baseado no jogo "Snake and
+            Stairs", mas as armadilhas são baseadas nas más praticas da
+            programnação.
+          </p>
+          <br />
+          <a href="https://github.com/Guchalo/LP2_22005787_22005793">Link</a>
+        </div>
+        <div class="item" id="item3">
+          <h3 class="headerCard">MyHome</h3>
+          <br />
+          <img src="images/ulht.png" alt="" />
+          <br />
+          <br />
+          <p>
+            Desenvolvido em C, para a cadeira de Arquitetura Avançada de
+            Computadores.
+          </p>
+          <p>
+            Consiste num projeto de uma SmartHome, realizada num
+            simulador(TinkerCad).
+          </p>
+          <br />
+          <a
+            href="https://www.tinkercad.com/things/86YPUv2t7dj-projeto-final-aac"
+            >Link</a
+          >
+        </div>
+        <div class="item" id="item4">
+          <h3 class="headerCard">BombRoad</h3>
+          <br />
+          <img src="images/ulht.png" alt="" />
+          <br />
+          <br />
+          <p>
+            Programa desenvolvido em C, para a cadeira de Linguagens de
+            Programação I.
+          </p>
+          <p>
+            Este programa, como o nome indica, consiste no jogo clássico
+            "BombRoad".
+          </p>
+          <br />
+          <a href="https://replit.com/@goncalonunes220/correcao">Link</a>
+        </div>
+        <div class="item" id="item5">
+          <h3 class="headerCard">Xadrez</h3>
+          <br />
+          <img src="images/ulht.png" alt="" />
+          <br />
+          <br />
+          <p>
+            Programa desenvolvido em Kotlin, para a cadeira de Fundamentos de
+            Programação.
+          </p>
+          <p>Este programa, como o nome indica, consiste num jogo de xadrez.</p>
+          <br />
+          <a href="https://github.com/rafaelsimoes22005793/xadrezFP">Link</a>
+        </div>
+        <div class="item" id="item6">
+          <h3 class="headerCard">Portfolio</h3>
+          <br />
+          <img src="images/ulht.png" alt="" />
+          <br />
+          <br />
+          <p>
+            Site desenvolvido em HTML/CSS e JavaScript, para a cadeira de
+            Programação Web.
+          </p>
+          <p>
+            Este site, como o nome indica, tem o objetivo de ser um portfolio
+            digital.
+          </p>
+          <br />
+          <a href="https://github.com/Guchalo/Projeto_PW_Portfolio">Link</a>
+        </div>
+      </article>
+    </div>
+
+    <footer>
+      Gonçalo Nunes - a22202617 - Universidade Lusófona - 2022/2023
+    </footer>
+  </body>
+</html>
