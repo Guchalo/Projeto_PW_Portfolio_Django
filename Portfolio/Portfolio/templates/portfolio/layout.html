@@ -13,7 +13,8 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     {% endblock styles %}
-    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    {% load static %}
+    <link rel="icon" href="{% static 'portfolio/img/logo.png' %}" type="image/x-icon" />
     <meta name="author" content="Gonçalo Nunes" />
     <meta name="description" content="Website para o projeto de pw" />
     <meta name="keywords" content="palavras chave" />
@@ -39,12 +40,6 @@
     </div>
     <div id="content" class="content">
       {% block content %}
-      <div class="title">Welcome</div>
-      <article>
-        <p>
-          "You define your own life. Don't let other people write your script."
-        </p>
-      </article>
       {% endblock content %}
     </div>
 

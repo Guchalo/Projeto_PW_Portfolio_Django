@@ -10,7 +10,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    {% load static %}
+    <link rel="icon" href="{% static 'portfolio/img/logo.png' %}" type="image/x-icon" />
     <meta name="author" content="Gonçalo Nunes" />
     <meta name="description" content="Website para o projeto de pw" />
     <meta name="keywords" content="palavras chave" />
@@ -73,7 +74,7 @@
               de script, imperativa, orientada a objetos, funcional, de tipagem
               dinâmica e forte
             </td>
-            <td>❌</td>
+            <td>✔</td>
           </tr>
           <tr>
             <td>Django</td>
@@ -81,7 +82,7 @@
               Django é um framework para desenvolvimento rápido para web,
               escrito em Python, que utiliza o padrão model-template-view
             </td>
-            <td>❌</td>
+            <td>✔</td>
           </tr>
           <tr>
             <td>Heroku</td>
