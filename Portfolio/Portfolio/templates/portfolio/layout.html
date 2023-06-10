@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% block styles %} {% load static %}
+    {% block styles %} 
+    {% load static %}
     <link rel="stylesheet" href="{% static 'portfolio/css/hero_page.css' %}" />
     <link
       rel="stylesheet"
@@ -28,15 +29,15 @@
     <label for="active" class="close"></label>
     <div class="wrapper">
       <ul>
-        <li><a href="{% url 'portfolio:index' %}">Home</a></li>
-        <li><a href="{% url 'portfolio:about' %}">About</a></li>
-        <li><a href="{% url 'portfolio:projects' %}">Projects</a></li>
-        <li><a href="{% url 'portfolio:contacts' %}">Contacts</a></li>
-        <li><a href="{% url 'portfolio:pw' %}">PW</a></li>
-        <li><a href="{% url 'portfolio:playground' %}">JSPlayground</a></li>
+        <li><a href="{% url 'Portfolio:index' %}">Home</a></li>
+        <li><a href="{% url 'Portfolio:about' %}">About</a></li>
+        <li><a href="{% url 'Portfolio:projects' %}">Projects</a></li>
+        <li><a href="{% url 'Portfolio:contacts' %}">Contacts</a></li>
+        <li><a href="{% url 'Portfolio:pw' %}">PW</a></li>
+        <li><a href="{% url 'Portfolio:playground' %}">JSPlayground</a></li>
       </ul>
     </div>
-    <div class="content">
+    <div id="content" class="content">
       {% block content %}
       <div class="title">Welcome</div>
       <article>
