@@ -27,6 +27,8 @@
                 <h3 class="headerCard">🔴{{ post.titulo }}</h3>
                 <br>
                 <b>USER</b>: {{ post.autor }}
+                <br>
+                <b>Data:</b> {{ post.data.day }}/{{ post.data.month }}/{{ post.data.year }}
                 <br><br>
                 <div class="headerCard">
                     {{ post.descrição }}
@@ -38,7 +40,7 @@
                 </div>
                 </span>
             </p>
-            <a href="{% url 'edita' post.id %}" style="float: right; margin-right: 10px">
+            <a href="{% url 'edita' post.id %}" style="float: right; margin-right: 10px; color: blue;">
                 Edit
             </a>
         </div>
