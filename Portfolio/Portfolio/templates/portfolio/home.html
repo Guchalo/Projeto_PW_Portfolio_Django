@@ -1,0 +1,47 @@
+{% extends "portfolio/layout.html" %}
+
+{% block styles %} 
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'portfolio/css/blog.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+{% endblock styles %}
+    
+
+{% block title %}
+    <title>Blog</title>
+{% endblock title %}
+
+{% block content %}
+    
+    <div class="title">Blog</div>
+    <br>
+    <a href="{% url 'new' %}" style="font-size: 30px; color: blue;">New Post</a>
+      <article>
+        {% for post in posts %}
+        <div class="item">
+            <p> 
+                <span>
+                <h3 class="headerCard">🔴{{ post.titulo }}</h3>
+                <br>
+                <b>USER</b>: {{ post.autor }}
+                <br><br>
+                <div class="headerCard">
+                    {{ post.descrição }}
+
+                    {% if post.link != "" %}
+                    <br><br>
+                    <b>Link:</b> {{ post.link}}
+                    {% endif %}
+                </div>
+                </span>
+            </p>
+            <a href="{% url 'edita' post.id %}" style="float: right; margin-right: 10px">
+                Edit
+            </a>
+        </div>
+        {% endfor %}
+      </article>
+{% endblock content %}

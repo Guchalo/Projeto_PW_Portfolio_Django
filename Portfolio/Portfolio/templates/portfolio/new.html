@@ -1,0 +1,34 @@
+{% extends "portfolio/layout.html" %}
+
+{% block styles %} 
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'portfolio/css/new.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+{% endblock styles %}
+    
+
+{% block title %}
+    <title>New Post</title>
+{% endblock title %}
+
+{% block content %}
+    
+    <div class="title">New Post</div>
+      <article>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="Form">{{ form.as_p }}</div>
+            
+
+            <a href="{% url 'home' %}" role="button" style="color: blue">Cancelar</a>
+            <input type="submit" value="Gravar">
+        </form>
+      </article>
+
+
+
+
+{% endblock content %}
