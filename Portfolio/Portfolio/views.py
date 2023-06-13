@@ -30,7 +30,7 @@ def new_post_view(request):
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            # redirecione para a página de sucesso ou faça o que for necessário
+            return redirect('home')
     else:
         form = PostForm()
     
