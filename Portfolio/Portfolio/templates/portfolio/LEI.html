@@ -1,0 +1,47 @@
+{% extends "portfolio/layout.html" %} {% block styles %} {% load static %}
+<link rel="stylesheet" href="{% static 'portfolio/css/LEI.css' %}" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+/>
+{% endblock styles %} {% block title %}
+<title>Cadeiras LEI</title>
+{% endblock title %} {% block content %}
+
+<div class="title">Cadeiras LEI</div>
+<article>
+  <div class="item">
+    <span>
+      <h3 class="headerCard">1ºAno</h3>
+      <br>
+      {% for c in lista1 %}
+        <p>🔴{{ c }}</p>
+      {% endfor %}
+     
+    </span>
+  </div>
+  <div class="item">
+    <span>
+      <h3 class="headerCard">2ºAno</h3>
+      <br>
+      {% for c in lista2 %}
+        <p>🟢{{ c }}</p>
+      {% endfor %}
+ 
+      
+    </span>
+  </div>
+  <div class="item">
+    <span>
+      <h3 class="headerCard">3ºAno</h3>
+      <br>
+      {% for c in lista3 %}
+        <p>🔵{{ c }}</p>
+      {% endfor %}
+ 
+    </span>
+  </div>
+</article>
+<p style="font-size: medium;">Dados obtidos através de WebScrapping</p>
+<br>
+{% endblock content %}

@@ -32,6 +32,7 @@ urlpatterns = [
     path('pw/', views.pw_view, name='pw'),
     path('home/', views.home_view,name='home'),
     path('new/', views.new_post_view, name='new'),
+    path('LEI/', views.LEI_view, name='LEI'),
     path('edita/<int:post_id>', views.edita_post_view, name='edita'),
     path('apaga/<int:post_id>', views.apaga_post_view, name='apaga'),   
 ]

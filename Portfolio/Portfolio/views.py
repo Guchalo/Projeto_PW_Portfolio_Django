@@ -2,6 +2,8 @@ from django.shortcuts import get_object_or_404, render,redirect
 
 from .models import Post
 from .forms import PostForm
+import requests
+from bs4 import BeautifulSoup
 
 def index_view(request):
 	return render(request, 'portfolio/index.html')
@@ -57,3 +59,36 @@ def edita_post_view(request, post_id):
 def apaga_post_view(request, post_id):
     Post.objects.get(id=post_id).delete()
     return redirect('home')
+
+def LEI_view(request):
+
+    lista_cadeiras = []
+    lista_cadeiras2 = []
+    lista_cadeiras3 = []
+
+    url = 'https://informatica.ulusofona.pt/cursos/licenciaturas/engenharia-informatica/lei-plano/'
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')
+
+    table = soup.find_all('table')[:3]
+
+    for t in table[0].find_all('tbody'):
+        for row in t.find_all('tr'):
+            data = row.find('td').text
+            lista_cadeiras.append(data)
+
+    for t in table[1].find_all('tbody'):
+        for row in t.find_all('tr'):
+            data = row.find('td').text
+            lista_cadeiras2.append(data)
+
+    for t in table[2].find_all('tbody'):
+        for row in t.find_all('tr'):
+            data = row.find('td').text
+            lista_cadeiras3.append(data)
+
+    return render(request, 'portfolio/LEI.html',{
+            'lista1': lista_cadeiras,
+            'lista2': lista_cadeiras2,
+            'lista3': lista_cadeiras3
+    })
