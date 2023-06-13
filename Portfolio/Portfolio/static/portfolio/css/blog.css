@@ -172,7 +172,7 @@ input[type="checkbox"] {
   padding: 24px;
   width: 90%;
   height: 90%;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: y mandatory;
   scroll-padding: 24px;
   border-radius: 8px;
   gap: 12px;
