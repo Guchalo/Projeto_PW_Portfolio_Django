@@ -18,7 +18,7 @@
     
     <div class="title">New Post</div>
       <article>
-        <form action="{% url 'edita' post_id %}" method="POST">
+        <form action="{% url 'edita' post_id %}" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="Form">{{ form.as_p }}</div>
     

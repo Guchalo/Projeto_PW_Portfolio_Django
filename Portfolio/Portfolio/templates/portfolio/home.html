@@ -37,6 +37,11 @@
                     <br><br>
                     <b>Link:</b> {{ post.link}}
                     {% endif %}
+                    {% if post.imagem.url != "" %}
+                    <br><br>
+                    <img src="{{ post.imagem.url }}" height="100px" width="100px">
+                    {% endif %}
+                    
                 </div>
                 </span>
             </p>

@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 app_name = 'Portfolio'
 
@@ -31,7 +33,8 @@ urlpatterns = [
     path('home/', views.home_view,name='home'),
     path('new/', views.new_post_view, name='new'),
     path('edita/<int:post_id>', views.edita_post_view, name='edita'),
-    path('apaga/<int:post_id>', views.apaga_post_view, name='apaga'),
-    
-    
+    path('apaga/<int:post_id>', views.apaga_post_view, name='apaga'),   
 ]
+urlpatterns += static(
+      settings.MEDIA_URL,
+      document_root=settings.MEDIA_ROOT)

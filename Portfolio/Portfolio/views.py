@@ -26,7 +26,7 @@ def home_view(request):
     return render(request, 'portfolio/home.html', context)
 
 def new_post_view(request):
-    form = PostForm(request.POST or None)
+    form = PostForm(request.POST or None, request.FILES)
     if form.is_valid():
         form.save()
         return redirect('home')
@@ -38,7 +38,7 @@ def new_post_view(request):
 
 def edita_post_view(request, post_id):
     post = Post.objects.get(id=post_id)
-    form = PostForm(request.POST or None, instance=post)
+    form = PostForm(request.POST or None, instance=post,)
 
     if form.is_valid():
         form.save()
