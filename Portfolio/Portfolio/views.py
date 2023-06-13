@@ -66,9 +66,9 @@ def LEI_view(request):
     lista_cadeiras2 = []
     lista_cadeiras3 = []
 
-    url = 'https://informatica.ulusofona.pt/cursos/licenciaturas/engenharia-informatica/lei-plano/'
+    url = 'https://informatica.ulusofona.pt/cursos/licenciaturas/engenharia-informatica/lei-plano'
     response = requests.get(url)
-    soup = BeautifulSoup(response.content, 'html.parser')
+    soup = BeautifulSoup(response.content, 'lxml')
 
     table = soup.find_all('table')[:3]
 
