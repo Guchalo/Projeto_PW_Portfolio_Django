@@ -1,39 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% load static %}
+{% extends "portfolio/layout.html" %}
+
+{% block styles %} 
+    {% load static %} 
     <link rel="stylesheet" href="{% static 'portfolio/css/contacts.css' %}" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    {% load static %}
-    <link rel="icon" href="{% static 'portfolio/img/logo.png' %}" type="image/x-icon" />
-    <meta name="author" content="Gonçalo Nunes" />
-    <meta name="description" content="Website para o projeto de pw" />
-    <meta name="keywords" content="palavras chave" />
+{% endblock styles %}
+
+{% block title %}
     <title>Contacts</title>
-  </head>
-  <body>
-    <input type="checkbox" id="active" />
-    <label for="active" class="menu-btn"><span></span></label>
-    <label for="active" class="close"></label>
-    <div class="wrapper">
-      <ul>
-        <li><a href="{% url 'index' %}">Home</a></li>
-        <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="{% url 'projects' %}">Projects</a></li>
-        <li><a href="{% url 'contacts' %}">Contacts</a></li>
-        <li><a href="{% url 'pw' %}">PW</a></li>
-        <li><a href="{% url 'playground' %}">JSPlayground</a></li>
-        <li><a href="{% url 'home' %}">Blog</a></li>
-      </ul>
-    </div>
-    <div class="content">
-      <div class="title">Contacts</div>
+{% endblock title %}
+
+{% block content %}
+<div class="title">Contacts</div>
       <br />
       <article>
         <div class="item" id="item1">
@@ -46,10 +27,4 @@
           <a href="https://www.linkedin.com/in/gonçalo-nunes11" target="_blank"><img src="{% static 'portfolio/img/linkedin-logo.png' %}" alt="" /></a>
         </div>
       </article>
-    </div>
-
-    <footer>
-      Gonçalo Nunes - a22202617 - Universidade Lusófona - 2022/2023
-    </footer>
-  </body>
-</html>
+{% endblock content %}
