@@ -14,7 +14,9 @@
     <span>
       <h3 class="headerCard">1ºAno</h3>
       <br>
-      <p>{{lista}}</p>
+      {% for c in lista1 %}
+        <p>{{ c }}</p>
+      {% endfor %}
      
     </span>
   </div>
@@ -22,7 +24,9 @@
     <span>
       <h3 class="headerCard">2ºAno</h3>
       <br>
-      
+      {% for c in lista2 %}
+        <p>{{ c }}</p>
+      {% endfor %}
  
       
     </span>
@@ -31,7 +35,9 @@
     <span>
       <h3 class="headerCard">3ºAno</h3>
       <br>
-      
+      {% for c in lista3 %}
+        <p>{{ c }}</p>
+      {% endfor %}
  
     </span>
   </div>

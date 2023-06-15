@@ -62,7 +62,9 @@ def apaga_post_view(request, post_id):
 
 def LEI_view(request):
 
-    lista_cadeiras = []
+    lista_cadeiras1 = []
+    lista_cadeiras2 = []
+    lista_cadeiras3 = []
 
     headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
@@ -78,9 +80,29 @@ def LEI_view(request):
 
     pre = div.find('pre').text
 
+    cadeiras = pre.split('--------------------------------------------------------')
+    cadeiras = cadeiras[1:4]
+
+    ano1 = cadeiras[0]
+    ano2 = cadeiras[1]
+    ano3 = cadeiras[2] 
+
+    lista_cadeiras1 = ano1.split('\n')
+    lista_cadeiras2 = ano2.split('\n')
+    lista_cadeiras3 = ano3.split('\n')
+
+    lista_cadeiras1 = lista_cadeiras1[2:]
+    lista_cadeiras2 = lista_cadeiras2[2:]
+    lista_cadeiras3 = lista_cadeiras3[2:]
+
+
+
+
     
 
     return render(request, 'portfolio/LEI.html',{
-            'lista': pre,
+            'lista1': lista_cadeiras1,
+            'lista2': lista_cadeiras2,
+            'lista3': lista_cadeiras3,
             
     })
