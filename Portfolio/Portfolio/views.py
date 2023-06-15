@@ -63,8 +63,6 @@ def apaga_post_view(request, post_id):
 def LEI_view(request):
 
     lista_cadeiras = []
-    lista_cadeiras2 = []
-    lista_cadeiras3 = []
 
     headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
@@ -72,29 +70,17 @@ def LEI_view(request):
 
     
 
-    url = 'https://informatica.ulusofona.pt/cursos/licenciaturas/engenharia-informatica/lei-plano'
+    url = 'https://github.com/Guchalo/Projeto_PW_Portfolio_Django'
     response = requests.get(url, headers=headers)
     soup = BeautifulSoup(response.content, 'lxml')
 
-    table = soup.find_all('table')[:3]
+    div = soup.find('div',class_='plain')
 
-    for t in table[0].find_all('tbody'):
-        for row in t.find_all('tr'):
-            data = row.find('td').text
-            lista_cadeiras.append(data)
+    pre = div.find('pre').text
 
-    for t in table[1].find_all('tbody'):
-        for row in t.find_all('tr'):
-            data = row.find('td').text
-            lista_cadeiras2.append(data)
-
-    for t in table[2].find_all('tbody'):
-        for row in t.find_all('tr'):
-            data = row.find('td').text
-            lista_cadeiras3.append(data)
+    
 
     return render(request, 'portfolio/LEI.html',{
-            'lista1': lista_cadeiras,
-            'lista2': lista_cadeiras2,
-            'lista3': lista_cadeiras3
+            'lista': pre,
+            
     })
