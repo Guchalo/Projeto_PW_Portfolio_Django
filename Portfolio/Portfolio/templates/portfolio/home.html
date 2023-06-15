@@ -35,7 +35,7 @@
 
                     {% if post.link != "" %}
                     <br><br>
-                    <b>Link:</b> {{ post.link}}
+                    <b>Link:</b> <a href="{{ post.link }}" style="color: blue;">{{ post.link }}</a>
                     {% endif %}
                     {% if post.imagem.url != "" %}
                     <br><br>

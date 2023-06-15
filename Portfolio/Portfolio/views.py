@@ -27,6 +27,10 @@ def home_view(request):
     context = {'posts': Post.objects.all()}
     return render(request, 'portfolio/home.html', context)
 
+def video_view(request):
+    context = {'posts': Post.objects.all()}
+    return render(request, 'portfolio/video.html', context)
+
 def new_post_view(request):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
@@ -68,9 +72,7 @@ def LEI_view(request):
 
     headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
-}
-
-    
+    }
 
     url = 'https://github.com/Guchalo/Projeto_PW_Portfolio_Django'
     response = requests.get(url, headers=headers)
@@ -94,11 +96,6 @@ def LEI_view(request):
     lista_cadeiras1 = lista_cadeiras1[2:]
     lista_cadeiras2 = lista_cadeiras2[2:]
     lista_cadeiras3 = lista_cadeiras3[2:]
-
-
-
-
-    
 
     return render(request, 'portfolio/LEI.html',{
             'lista1': lista_cadeiras1,

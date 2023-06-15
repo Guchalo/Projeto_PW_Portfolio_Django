@@ -33,6 +33,7 @@ urlpatterns = [
     path('home/', views.home_view,name='home'),
     path('new/', views.new_post_view, name='new'),
     path('LEI/', views.LEI_view, name='LEI'),
+    path('video/', views.video_view, name='video'),
     path('edita/<int:post_id>', views.edita_post_view, name='edita'),
     path('apaga/<int:post_id>', views.apaga_post_view, name='apaga'),   
 ]
