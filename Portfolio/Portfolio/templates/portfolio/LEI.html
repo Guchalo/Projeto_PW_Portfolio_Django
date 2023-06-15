@@ -15,8 +15,12 @@
       <h3 class="headerCard">1ºAno</h3>
       <br>
       {% for c in lista1 %}
-        <p>🔴{{ c }}</p>
+        {% if not forloop.last %}
+          <p>🔴{{ c }}</p>
+        {% endif %}
       {% endfor %}
+
+      
      
     </span>
   </div>
@@ -25,7 +29,9 @@
       <h3 class="headerCard">2ºAno</h3>
       <br>
       {% for c in lista2 %}
-        <p>🟢{{ c }}</p>
+        {% if not forloop.last %}
+          <p>🟢{{ c }}</p>
+        {% endif %}
       {% endfor %}
  
       
@@ -36,7 +42,9 @@
       <h3 class="headerCard">3ºAno</h3>
       <br>
       {% for c in lista3 %}
-        <p>🔵{{ c }}</p>
+        {% if not forloop.last %}
+          <p>🔵{{ c }}</p>
+        {% endif %}
       {% endfor %}
  
     </span>
