@@ -27,13 +27,10 @@ urlpatterns = [
     path('index/', views.index_view,name='index'),
     path('about/', views.about_view, name='about'),
     path('contacts/', views.contacts_view, name='contacts'),
-    path('playground/', views.playground_view, name='playground'),
     path('projects/', views.projects_view, name='projects'),
-    path('pw/', views.pw_view, name='pw'),
     path('home/', views.home_view,name='home'),
     path('new/', views.new_post_view, name='new'),
     path('LEI/', views.LEI_view, name='LEI'),
-    path('video/', views.video_view, name='video'),
     path('edita/<int:post_id>', views.edita_post_view, name='edita'),
     path('apaga/<int:post_id>', views.apaga_post_view, name='apaga'),   
 ]
